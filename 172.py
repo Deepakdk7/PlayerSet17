@@ -1,5 +1,5 @@
-ax=list(input())
-ax.sort()
-ax=(ax[::-1])
-for i in ax:
+bx=list(input())
+bx.sort()
+bx=(bx[::-1])
+for i in bx:
     print(i,end='')
