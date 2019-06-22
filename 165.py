@@ -6,7 +6,7 @@ def A(k):
     else:
         k=k+1
         A(k)
-ax=list(map(int,input().split()))
+bx=list(map(int,input().split()))
 a=list(map(int,input().split()))
-k=ax[1]
+k=bx[1]
 A(k)
