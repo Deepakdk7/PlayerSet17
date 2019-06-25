@@ -1,30 +1,21 @@
 ax=input()
 bx=input()
 a=[]
-if ' ' in ax and ' ' in bx:
-    ax=ax.split()
-    bx=bx.split()
-    if len(ax)>len(bx):
-        for i in ax:
-            if i not in bx:
-                a.append(i)
-    else:
-        for i in bx:
-            if i not in ax:
-                a.append(i)
+if (ax.isalpha() or " " in ax) and (bx.isalpha() or " " in bx):
+    ax=list(ax.split())
+    bx=list(bx.split())
+    for i in ax:
+        if ax.count(i) > bx.count(i) and i not in a:
+            a.append(i)
+    for i in bx:
+        if bx.count(i)>ax.count(i) and i not in a:
+            a.append(i)
     print(*a)
 else:
-    ax=list(ax)
-    bx=list(bx)
-    mi=min(len(ax),len(bx))
-    ma=max(len(ax),len(bx))
-    for i in range(0,mi):
-        if ax[i]!=bx[i]:
-            a.append(ax[i])
-            a.append(bx[i])
-    for i in range(mi,ma):
-        if len(ax)>len(bx):
-            a.append(ax[i])
-        else:
-            a.append(bx[i])
+    for i in ax:
+        if ax.count(i)>bx.count(i) and i not in a:
+            a.append(i)
+    for j in bx:
+        if bx.count(j)>ax.count(j) and j not in a:
+            a.append(j)
     print(*a)
