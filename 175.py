@@ -1,0 +1,9 @@
+ax=list(input())
+bx=list(input())
+a=ax+bx
+a=list(dict.fromkeys(a))
+a.sort()
+if(len(a)==26):
+    print('complementary')
+else:
+    print('non-complementary')
